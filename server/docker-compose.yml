@@ -7,10 +7,11 @@ services:
     hostname: postgres
     environment:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
     volumes:
-      - postgres:/var/lib/postgres/data
+      - nwl-setup:/var/lib/postgres/data
     ports:
       - 5432:5432
 
 volumes:
-  postgres:
+  nwl-setup:
