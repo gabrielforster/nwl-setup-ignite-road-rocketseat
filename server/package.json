@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "update-db": "prisma db seed",
     "dev": "tsx watch src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +21,8 @@
     "prisma": "^4.8.1",
     "tsx": "^3.12.2",
     "typescript": "^4.9.4"
+  },
+  "prisma": {
+    "seed": "tsx prisma/seed.ts"
   }
 }
